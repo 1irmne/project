@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thai Silk – Ban Khok Muang</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Georgia", serif;
+      background: #e6d3a3;
+      color: #4b3a2f;
+    }
+
+    header {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      min-height: 100vh;
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1549880338-65ddcdfd017b') center/cover no-repeat;
+      padding: 80px;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-box {
+      background: rgba(255, 245, 220, 0.85);
+      padding: 60px;
+      max-width: 600px;
+      border: 3px solid #8b6b3e;
+    }
+
+    .hero-box h1 {
+      text-align: center;
+      font-size: 56px;
+      margin-bottom: 20px;
+      letter-spacing: 2px;
+    }
+
+    .hero-box p {
+      font-size: 18px;
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    nav {
+      background: #bfa16a;
+      padding: 60px 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 22px;
+      font-weight: bold;
+      border-bottom: 2px solid rgba(255,255,255,0.5);
+      padding-bottom: 5px;
+    }
+
+    section {
+      padding: 100px 80px;
+      background: #f6e7c1;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 60px;
+    }
+
+    .content {
+      background: #fff8e6;
+      padding: 60px;
+      border: 2px solid #8b6b3e;
+    }
+
+    .content h2 {
+      font-size: 42px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .content p {
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .frame {
+      border: 6px solid #c9a24d;
+      padding: 10px;
+      background: #fff;
+    }
+
+    .frame img {
+      width: 100%;
+      display: block;
+    }
+
+    .click {
+      text-align: center;
+      font-weight: bold;
+      margin-top: 8px;
+    }
+
+    footer {
+      background: #8b6b3e;
+      color: #fff;
+      text-align: center;
+      padding: 30px;
+    }
+
+    @media (max-width: 900px) {
+      header, section {
+        grid-template-columns: 1fr;
+      }
+      nav {
+        flex-direction: row;
+        justify-content: space-around;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="hero">
+    <div class="hero-box">
+      <h1>Thai Silk</h1>
+      <p>
+        Ban Khok Muang silk is a handwoven textile that reflects the unique identity
+        of the Ban Khok Muang community in Prasat District, Buriram Province.
+        It preserves traditional wisdom in silk weaving and supports cultural tourism.
+      </p>
+    </div>
+  </div>
+
+  <nav>
+    <a href="#about">About Silk</a>
+    <a href="#style">Silk Style</a>
+    <a href="#royal">Royal Pattern</a>
+    <a href="#timeline">Timeline</a>
+  </nav>
+</header>
+
+<section id="about">
+  <div class="content">
+    <h2>About Thai Silk</h2>
+    <p>
+      Khok Muang silk from Buriram Province is distinguished by the
+      "Phak Kud" pattern inspired by Muang Tam Sanctuary.
+      It is produced using traditional mud-dyeing techniques with clay
+      from ancient barays, resulting in soft texture and long-lasting colors.
+      The community also promotes handicrafts and cultural tourism
+      rooted in Khmer civilization and local wisdom.
+    </p>
+  </div>
+
+  <div class="gallery">
+    <div class="frame">
+      <img src="https://images.unsplash.com/photo-1609873539027-2d0c4f6b6f9c" alt="Thai silk cloth" />
+      <div class="click">Click click</div>
+    </div>
+    <div class="frame">
+      <img src="https://images.unsplash.com/photo-1602526219045-bb6dfc6e9c90" alt="Thai silk pattern" />
+      <div class="click">Click click</div>
+    </div>
+  </div>
+</section>
+
+<section id="style">
+  <div class="content">
+    <h2>Silk Style</h2>
+    <p>
+      The weaving style and geometric patterns are characteristic of the
+      Northeast region of Thailand. These textiles are particularly known
+      for their intricate designs and the use of the ikat (tie-dye)
+      technique applied to yarns before weaving begins.
+    </p>
+  </div>
+  <div class="gallery">
+    <div class="frame">
+      <img src="https://images.unsplash.com/photo-1602526219045-bb6dfc6e9c90" />
+      <div class="click">Click click</div>
+    </div>
+  </div>
+</section>
+
+<section id="royal">
+  <div class="content">
+    <h2>Royal S Pattern</h2>
+    <p>
+      The S-pattern silk (Sirivannavari “S” motif) is a royal pattern
+      designed to preserve Thai textile wisdom. The motif represents
+      love, strong bonds, and the continuation of cultural heritage.
+    </p>
+  </div>
+  <div class="gallery">
+    <div class="frame">
+      <img src="https://images.unsplash.com/photo-1609873539027-2d0c4f6b6f9c" />
+    </div>
+  </div>
+</section>
+
+<section id="timeline" style="grid-template-columns:1fr;">
+  <div class="content">
+    <h2>Important Timelines</h2>
+    <p><strong>Ancient Period:</strong> Silk weaving influenced by Khmer civilization.</p>
+    <p><strong>Community Era:</strong> Ban Khok Muang preserves local weaving wisdom.</p>
+    <p><strong>Modern Day:</strong> Thai silk promoted as cultural tourism and heritage.</p>
+  </div>
+</section>
+
+<footer>
+  © 2026 Ban Khok Muang Thai Silk
+</footer>
+
+</body>
+</html>

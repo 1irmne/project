@@ -127,7 +127,56 @@
         justify-content: space-around;
       }
     }
-  </style>
+    .frame {
+      border: 6px solid #c9a24d;
+      padding: 10px;
+      background: #fff;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .frame:hover {
+      transform: scale(1.08);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+    }
+
+    /* Popup */
+    .popup {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.75);
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    .popup-content {
+      background: #fff8e6;
+      padding: 30px;
+      max-width: 600px;
+      border: 4px solid #8b6b3e;
+      text-align: center;
+      animation: pop 0.35s ease;
+    }
+
+    .popup-content img {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+
+    .close {
+      font-size: 22px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    @keyframes pop {
+      from { transform: scale(0.6); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+</style>
 </head>
 <body>
 
@@ -220,6 +269,44 @@
 </section>
 
 <footer>
+  © 2026 Ban Khok Muang Thai Silk
+</footer>
+
+<!-- Popup -->
+<div class="popup" id="popup">
+  <div class="popup-content">
+    <span class="close" onclick="closePopup()">✕</span>
+    <img id="popup-img" src="">
+    <p id="popup-text">Thai Silk Detail</p>
+  </div>
+</div>
+
+<script>
+  const frames = document.querySelectorAll('.frame img');
+  const popup = document.getElementById('popup');
+  const popupImg = document.getElementById('popup-img');
+  const popupText = document.getElementById('popup-text');
+
+  frames.forEach(img => {
+    img.addEventListener('click', () => {
+      popup.style.display = 'flex';
+      popupImg.src = img.src;
+      popupText.innerText = img.alt || 'Thai Silk';
+    });
+  });
+
+  function closePopup() {
+    popup.style.display = 'none';
+  }
+
+  popup.addEventListener('click', e => {
+    if (e.target === popup) closePopup();
+  });
+</script>
+
+</body>
+</html>
+
   © 2026 Ban Khok Muang Thai Silk
 </footer>
 
